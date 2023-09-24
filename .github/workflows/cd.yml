@@ -39,6 +39,7 @@ jobs:
             path: dist
         
       - run: ls dist
+      # ให้ deploy เอง เช่น ssh
       
       - uses: actions/checkout@v4
       
@@ -48,4 +49,4 @@ jobs:
             username: ${{ github.actor }} #codingthailand
             reponame: ${{ github.event.repository.name }}  #vue-github-app
             token: ${{ secrets.GITHUB_TOKEN }}
-      
+        
